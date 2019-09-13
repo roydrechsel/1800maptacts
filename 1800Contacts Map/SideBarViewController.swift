@@ -25,6 +25,7 @@ class SideBarViewController: UIViewController
     {
         super.viewDidLoad()
         
+        //change
         tableView.reloadData()
     }
 }
