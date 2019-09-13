@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHL-6n-biD">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GT-Walsheim-Regular.otf">
+            <string>GTWalsheim-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Side Bar View Controller-->
+        <scene sceneID="uku-j9-DxG">
+            <objects>
+                <viewController storyboardIdentifier="SideBarViewController" id="KLd-Ob-30z" customClass="SideBarViewController" customModule="_800Contacts_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DK-jp-peD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-Vh-z7H">
+                                <rect key="frame" x="0.0" y="24" width="414" height="838"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="zvI-dc-VI7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3411764706" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FloorCell" id="g3c-5C-5y6" customClass="FloorMapsCell" customModule="_800Contacts_Map" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g3c-5C-5y6" id="HGk-pQ-Rhf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-i5-eBx">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YFh-i5-eBx" firstAttribute="leading" secondItem="HGk-pQ-Rhf" secondAttribute="leadingMargin" id="HSa-8i-NJp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YFh-i5-eBx" secondAttribute="bottom" id="PFC-jG-U9x"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YFh-i5-eBx" secondAttribute="trailing" id="TjY-QZ-LRU"/>
+                                                <constraint firstItem="YFh-i5-eBx" firstAttribute="top" secondItem="HGk-pQ-Rhf" secondAttribute="topMargin" id="ebF-zJ-MHU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="floorTitle" destination="YFh-i5-eBx" id="Ojk-5F-cIv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KLd-Ob-30z" id="jnZ-u0-bi5"/>
+                                    <outlet property="delegate" destination="KLd-Ob-30z" id="PuX-6D-dai"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iwY-Vh-z7H" firstAttribute="top" secondItem="sTq-dv-mJS" secondAttribute="top" constant="-20" id="69h-rd-bHW"/>
+                            <constraint firstItem="sTq-dv-mJS" firstAttribute="bottom" secondItem="iwY-Vh-z7H" secondAttribute="bottom" id="Dlo-vo-y2b"/>
+                            <constraint firstItem="sTq-dv-mJS" firstAttribute="trailing" secondItem="iwY-Vh-z7H" secondAttribute="trailing" id="IEF-NB-OuP"/>
+                            <constraint firstItem="iwY-Vh-z7H" firstAttribute="leading" secondItem="sTq-dv-mJS" secondAttribute="leading" id="sLM-kv-tyh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sTq-dv-mJS"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="iwY-Vh-z7H" id="dtO-VT-njE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBk-6s-gJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="129"/>
+        </scene>
+        <!--Floor Maps View Controller-->
+        <scene sceneID="BsS-Xd-Wrh">
+            <objects>
+                <viewController storyboardIdentifier="FloorMapsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aHL-6n-biD" customClass="FloorMapsViewController" customModule="_800Contacts_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yo3-NF-aEH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aZ9-nH-TBw">
+                                <rect key="frame" x="0.0" y="214" width="414" height="599"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liT-CX-e2N" userLabel="Buttons View">
+                                <rect key="frame" x="0.0" y="114" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3kA-0Y-MlA">
+                                        <rect key="frame" x="16" y="35" width="382" height="102"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-Kj-8QI">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBU-PH-elx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="fK6-K6-GjE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-pc-KXn">
+                                                        <rect key="frame" x="123" y="0.0" width="117.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="chL-T3-5x9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-2l-hH9">
+                                                        <rect key="frame" x="246.5" y="0.0" width="135.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="pWE-4Q-jYB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-fS-X7i">
+                                                <rect key="frame" x="0.0" y="36" width="382" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-kP-TzH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="QG7-iX-lq3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzZ-Ve-gTo">
+                                                        <rect key="frame" x="123" y="0.0" width="117.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="vQI-y0-t01"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCH-p1-pXL">
+                                                        <rect key="frame" x="246.5" y="0.0" width="135.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="cel-xz-cm8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-2M-7YZ">
+                                                <rect key="frame" x="0.0" y="72" width="382" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upK-j0-Zc5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="4VZ-nN-Mf4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX6-hc-ysX">
+                                                        <rect key="frame" x="185.5" y="0.0" width="196.5" height="30"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Ph9-2X-f1d"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3kA-0Y-MlA" firstAttribute="leading" secondItem="liT-CX-e2N" secondAttribute="leading" constant="16" id="1X2-m8-HDb"/>
+                                    <constraint firstItem="3kA-0Y-MlA" firstAttribute="top" secondItem="liT-CX-e2N" secondAttribute="top" constant="35" id="Exd-30-XXg"/>
+                                    <constraint firstAttribute="height" constant="100" id="ajS-Kv-4SJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3kA-0Y-MlA" secondAttribute="trailing" constant="16" id="eF5-ub-b6R"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Floor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-n2-5mb">
+                                <rect key="frame" x="0.0" y="94" width="414" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="z14-hD-J83"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-xT-m8h">
+                                <rect key="frame" x="0.0" y="31" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="1-800 Contacts Map" id="fUo-ME-8cL">
+                                        <barButtonItem key="leftBarButtonItem" title="Maps" id="Upw-RW-Ele">
+                                            <connections>
+                                                <action selector="sideBarButtonTapped:" destination="aHL-6n-biD" id="NVE-gQ-FAX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R4M-n2-5mb" firstAttribute="leading" secondItem="iLW-59-9Gf" secondAttribute="leading" id="42w-sj-lUs"/>
+                            <constraint firstItem="iLW-59-9Gf" firstAttribute="trailing" secondItem="aZ9-nH-TBw" secondAttribute="trailing" id="AJX-10-pgq"/>
+                            <constraint firstItem="liT-CX-e2N" firstAttribute="trailing" secondItem="iLW-59-9Gf" secondAttribute="trailing" id="D8V-le-3TY"/>
+                            <constraint firstItem="liT-CX-e2N" firstAttribute="bottom" secondItem="aZ9-nH-TBw" secondAttribute="top" id="D9H-JQ-5KR"/>
+                            <constraint firstItem="aZ9-nH-TBw" firstAttribute="leading" secondItem="iLW-59-9Gf" secondAttribute="leading" id="EQd-gL-czr"/>
+                            <constraint firstItem="iLW-59-9Gf" firstAttribute="bottom" secondItem="aZ9-nH-TBw" secondAttribute="bottom" id="cSx-uz-BWZ"/>
+                            <constraint firstItem="liT-CX-e2N" firstAttribute="leading" secondItem="iLW-59-9Gf" secondAttribute="leading" id="dzn-4u-x9d"/>
+                            <constraint firstItem="R4M-n2-5mb" firstAttribute="top" secondItem="iLW-59-9Gf" secondAttribute="top" constant="50" id="ikg-Hn-Gki"/>
+                            <constraint firstItem="liT-CX-e2N" firstAttribute="top" secondItem="R4M-n2-5mb" secondAttribute="bottom" id="nkV-un-9q1"/>
+                            <constraint firstItem="iLW-59-9Gf" firstAttribute="trailing" secondItem="R4M-n2-5mb" secondAttribute="trailing" id="oXx-hQ-rqw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iLW-59-9Gf"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="eighthRoomButton" destination="QX6-hc-ysX" id="ddj-HZ-x0F"/>
+                        <outlet property="fifthRoomButton" destination="FzZ-Ve-gTo" id="tOx-cR-quY"/>
+                        <outlet property="firstRoomButton" destination="wBU-PH-elx" id="Pr2-FP-2DY"/>
+                        <outlet property="floorLabel" destination="R4M-n2-5mb" id="L4b-c8-Q6g"/>
+                        <outlet property="fourthRoomButton" destination="bsR-kP-TzH" id="0Rb-hQ-Xn2"/>
+                        <outlet property="mapImageView" destination="aZ9-nH-TBw" id="ZTL-cE-wSL"/>
+                        <outlet property="roomButtonsView" destination="liT-CX-e2N" id="kxp-eE-XBe"/>
+                        <outlet property="secondRoomButton" destination="hAQ-pc-KXn" id="Bpd-nJ-K2u"/>
+                        <outlet property="seventhRoomButton" destination="upK-j0-Zc5" id="wpM-Oh-7Kk"/>
+                        <outlet property="sixthRoomButton" destination="JCH-p1-pXL" id="A3s-1U-Oiu"/>
+                        <outlet property="thirdRoomButton" destination="FZb-2l-hH9" id="XBL-pQ-7ob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSa-56-e8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="129"/>
+        </scene>
+    </scenes>
+</document>
