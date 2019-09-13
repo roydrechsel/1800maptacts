@@ -78,6 +78,7 @@ extension ContainerViewController: FloorMapsViewControllerDelegate
             addSideBarViewController()
         }
         
+        //another change
         animateSideBar(shouldExpand: notAlreadyExpanded)
     }
     
