@@ -12,12 +12,12 @@
 		49A933C1232B2CC400DE46A4 /* GT-Walsheim-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A713D041232ABA4E000382AD /* GT-Walsheim-Regular.otf */; };
 		49A933C2232B2CC700DE46A4 /* GT-Walsheim-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A713D040232ABA4D000382AD /* GT-Walsheim-Bold.otf */; };
 		49A933C3232C038000DE46A4 /* FloorMaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A933C5232C038000DE46A4 /* FloorMaps.storyboard */; };
+		49F17D4F232FF8C000C5DD4D /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F17D4E232FF8C000C5DD4D /* MapsViewController.swift */; };
+		49F17D51232FF93300C5DD4D /* MapsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F17D50232FF93300C5DD4D /* MapsViewController.storyboard */; };
 		A713D009232A9BFA000382AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D008232A9BFA000382AD /* AppDelegate.swift */; };
 		A713D00B232A9BFA000382AD /* FloorMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D00A232A9BFA000382AD /* FloorMapsViewController.swift */; };
 		A713D010232A9BFB000382AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A713D00F232A9BFB000382AD /* Assets.xcassets */; };
 		A713D013232A9BFB000382AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A713D011232A9BFB000382AD /* LaunchScreen.storyboard */; };
-		A713D01E232A9BFB000382AD /* _800Contacts_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D01D232A9BFB000382AD /* _800Contacts_MapTests.swift */; };
-		A713D029232A9BFB000382AD /* _800Contacts_MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D028232A9BFB000382AD /* _800Contacts_MapUITests.swift */; };
 		A713D039232AA751000382AD /* FloorMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D038232AA751000382AD /* FloorMaps.swift */; };
 		A713D03B232AAE26000382AD /* FloorMapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D03A232AAE26000382AD /* FloorMapsCell.swift */; };
 		A713D03D232AAF9B000382AD /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A713D03C232AAF9B000382AD /* SideBarViewController.swift */; };
@@ -43,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		49A933C4232C038000DE46A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FloorMaps.storyboard; sourceTree = "<group>"; };
+		49F17D4E232FF8C000C5DD4D /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		49F17D50232FF93300C5DD4D /* MapsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsViewController.storyboard; sourceTree = "<group>"; };
 		A713D005232A9BFA000382AD /* 1800Contacts Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1800Contacts Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A713D008232A9BFA000382AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A713D00A232A9BFA000382AD /* FloorMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapsViewController.swift; sourceTree = "<group>"; };
@@ -50,11 +52,7 @@
 		A713D012232A9BFB000382AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A713D014232A9BFB000382AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A713D019232A9BFB000382AD /* 1800Contacts MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1800Contacts MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A713D01D232A9BFB000382AD /* _800Contacts_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _800Contacts_MapTests.swift; sourceTree = "<group>"; };
-		A713D01F232A9BFB000382AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A713D024232A9BFB000382AD /* 1800Contacts MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "1800Contacts MapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A713D028232A9BFB000382AD /* _800Contacts_MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _800Contacts_MapUITests.swift; sourceTree = "<group>"; };
-		A713D02A232A9BFB000382AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A713D038232AA751000382AD /* FloorMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMaps.swift; sourceTree = "<group>"; };
 		A713D03A232AAE26000382AD /* FloorMapsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorMapsCell.swift; sourceTree = "<group>"; };
 		A713D03C232AAF9B000382AD /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				A713D007232A9BFA000382AD /* 1800Contacts Map */,
-				A713D01C232A9BFB000382AD /* 1800Contacts MapTests */,
-				A713D027232A9BFB000382AD /* 1800Contacts MapUITests */,
 				A713D006232A9BFA000382AD /* Products */,
+				49F17D4E232FF8C000C5DD4D /* MapsViewController.swift */,
+				49F17D50232FF93300C5DD4D /* MapsViewController.storyboard */,
 				A713D042232ABA59000382AD /* Fonts */,
 			);
 			sourceTree = "<group>";
@@ -126,24 +124,6 @@
 				A713D014232A9BFB000382AD /* Info.plist */,
 			);
 			path = "1800Contacts Map";
-			sourceTree = "<group>";
-		};
-		A713D01C232A9BFB000382AD /* 1800Contacts MapTests */ = {
-			isa = PBXGroup;
-			children = (
-				A713D01D232A9BFB000382AD /* _800Contacts_MapTests.swift */,
-				A713D01F232A9BFB000382AD /* Info.plist */,
-			);
-			path = "1800Contacts MapTests";
-			sourceTree = "<group>";
-		};
-		A713D027232A9BFB000382AD /* 1800Contacts MapUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A713D028232A9BFB000382AD /* _800Contacts_MapUITests.swift */,
-				A713D02A232A9BFB000382AD /* Info.plist */,
-			);
-			path = "1800Contacts MapUITests";
 			sourceTree = "<group>";
 		};
 		A713D042232ABA59000382AD /* Fonts */ = {
@@ -265,6 +245,7 @@
 				A713D010232A9BFB000382AD /* Assets.xcassets in Resources */,
 				49A933C2232B2CC700DE46A4 /* GT-Walsheim-Bold.otf in Resources */,
 				49A933C3232C038000DE46A4 /* FloorMaps.storyboard in Resources */,
+				49F17D51232FF93300C5DD4D /* MapsViewController.storyboard in Resources */,
 				49A933C1232B2CC400DE46A4 /* GT-Walsheim-Regular.otf in Resources */,
 				49A933BF232B2CBC00DE46A4 /* GT-Walsheim-Medium-Oblique.otf in Resources */,
 				49A933C0232B2CC100DE46A4 /* GT-Walsheim-Medium.otf in Resources */,
@@ -294,6 +275,7 @@
 			files = (
 				A713D00B232A9BFA000382AD /* FloorMapsViewController.swift in Sources */,
 				A713D03B232AAE26000382AD /* FloorMapsCell.swift in Sources */,
+				49F17D4F232FF8C000C5DD4D /* MapsViewController.swift in Sources */,
 				A713D03D232AAF9B000382AD /* SideBarViewController.swift in Sources */,
 				A713D009232A9BFA000382AD /* AppDelegate.swift in Sources */,
 				A713D044232ABCE2000382AD /* ContainerViewController.swift in Sources */,
@@ -305,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A713D01E232A9BFB000382AD /* _800Contacts_MapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A713D029232A9BFB000382AD /* _800Contacts_MapUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
