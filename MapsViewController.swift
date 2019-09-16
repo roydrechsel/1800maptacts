@@ -30,13 +30,13 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var roomButtonsStackViewThree: UIStackView!
     
     var roomButtons: [UIButton]!
-    var currentFloor = "First Floor"
+    var currentFloor = "1st Floor"
     
-    let firstFloor = "First Floor"
-    let secondFloor = "Second Floor"
-    let thirdFloor = "Third Floor"
-    let fourthFloor = "Fourth Floor"
-    let fifthFloor = "Fifth Floor"
+    let firstFloor = "1st Floor"
+    let secondFloor = "2nd Floor"
+    let thirdFloor = "3rd Floor"
+    let fourthFloor = "4th Floor"
+    let fifthFloor = "5th Floor"
     
     let firstFloorRooms = "Silver Lake"
     let secondFloorRooms = "Slickrock"
@@ -58,6 +58,15 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 10.0
+        
+        firstRoomButton.layer.cornerRadius = 4
+        secondRoomButton.layer.cornerRadius = 4
+        thirdRoomButton.layer.cornerRadius = 4
+        fourthRoomButton.layer.cornerRadius = 4
+        fifthRoomButton.layer.cornerRadius = 4
+        sixthRoomButton.layer.cornerRadius = 4
+        seventhRoomButton.layer.cornerRadius = 4
+        eighthRoomButton.layer.cornerRadius = 4
         
 //        for button in roomButtons
 //        {
