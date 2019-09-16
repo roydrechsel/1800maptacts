@@ -30,6 +30,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var roomButtonsStackViewThree: UIStackView!
     
     var roomButtons: [UIButton]!
+    var currentFloor = "First Floor"
     
     let firstFloor = "First Floor"
     let secondFloor = "Second Floor"
@@ -47,7 +48,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     {
         super.viewWillAppear(animated)
         
-        configureFirstFloorButtons()
+        setRoomButtons(floor: currentFloor)
         floorLabel.text = firstFloor
     }
     
@@ -63,7 +64,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
 //            button.setTitle(fifthFloorRooms[roomButtons.firstIndex(of: button) ?? 1], for: [])
 //        }
         
-        setFloorMap(floor: firstFloor)
+        setDefaultFloorMap(floor: firstFloor)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView?
@@ -73,42 +74,108 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     
     @IBAction func firstRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case firstFloor:
+            mapImage.image = FloorMaps.sharedInstance.firstFloorSilverLake
+        case secondFloor:
+            mapImage.image = FloorMaps.sharedInstance.secondFloorSlickRock
+        case thirdFloor:
+            mapImage.image = FloorMaps.sharedInstance.thirdFloorKingsPeak
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorAlta
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorArches
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func secondRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorBrighton
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorBryceCanyon
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func thirdRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorDeerValley
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorCanyonlands
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func fourthRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorSnowbird
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorCapitolReef
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func fifthRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorSolitude
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorGoldenSpike
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func sixthRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fourthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fourthFloorSundance
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorRainbowBridge
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func seventhRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorTimpanogosCave
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     @IBAction func eighthRoomButtonTapped(_ sender: Any)
     {
-        
+        switch currentFloor
+        {
+        case fifthFloor:
+            mapImage.image = FloorMaps.sharedInstance.fifthFloorZion
+        default:
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
+        }
     }
     
     func setRoomButtons(floor: String)
@@ -116,50 +183,54 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         
         if floor == firstFloor
         {
-//            firstRoomButton.titleLabel?.text = "Silver Lake"
-//            secondRoomButton.isHidden = true
+            configureFirstFloorButtons()
         }
         else if floor == secondFloor
         {
-            mapImage.image = UIImage(named: "2ndFloor")
+            configureSecondFloorButtons()
         }
         else if floor == thirdFloor
         {
-            mapImage.image = UIImage(named: "3rdFloor")
+            configureThirdFloorButtons()
         }
         else if floor == fourthFloor
         {
-            mapImage.image = UIImage(named: "4thFloor")
+            configureFourthFloorButtons()
         }
         else if floor == fifthFloor
         {
-            mapImage.image = UIImage(named: "5thFloor")
+            configureFifthFloorButtons()
         }
     }
     
-    func setFloorMap(floor: String?)
+    func setDefaultFloorMap(floor: String?)
     {
         floorLabel.text = floor
         
         if floor == firstFloor
         {
-            mapImage.image = UIImage(named: "1stFloor")
+            floorLabel.text = firstFloor
+            mapImage.image = FloorMaps.sharedInstance.firstFloor
         }
         else if floor == secondFloor
         {
-            mapImage.image = UIImage(named: "2ndFloor")
+            floorLabel.text = secondFloor
+            mapImage.image = FloorMaps.sharedInstance.secondFloor
         }
         else if floor == thirdFloor
         {
-            mapImage.image = UIImage(named: "3rdFloor")
+            floorLabel.text = thirdFloor
+            mapImage.image = FloorMaps.sharedInstance.thirdFloor
         }
         else if floor == fourthFloor
         {
-            mapImage.image = UIImage(named: "4thFloor")
+            floorLabel.text = fourthFloor
+            mapImage.image = FloorMaps.sharedInstance.fourthFloor
         }
         else if floor == fifthFloor
         {
-            mapImage.image = UIImage(named: "5thFloor")
+            floorLabel.text = fifthFloor
+            mapImage.image = FloorMaps.sharedInstance.fifthFloor
         }
     }
     
@@ -192,6 +263,9 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     
     func configureFourthFloorButtons()
     {
+        secondRoomButton.isHidden = false
+        thirdRoomButton.isHidden = false
+        roomButtonsStackViewTwo.isHidden = false
         firstRoomButton.setTitle("Alta", for: .normal)
         secondRoomButton.setTitle("Brighton", for: .normal)
         thirdRoomButton.setTitle("Deer Valley", for: .normal)
@@ -203,6 +277,10 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     
     func configureFifthFloorButtons()
     {
+        secondRoomButton.isHidden = false
+        thirdRoomButton.isHidden = false
+        roomButtonsStackViewTwo.isHidden = false
+        roomButtonsStackViewThree.isHidden = false
         firstRoomButton.setTitle("Arches", for: .normal)
         secondRoomButton.setTitle("Bryce Canyon", for: .normal)
         thirdRoomButton.setTitle("Canyonlands", for: .normal)
@@ -212,5 +290,40 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         seventhRoomButton.setTitle("Timpanogos Cave", for: .normal)
         eighthRoomButton.setTitle("Zion", for: .normal)
         ninthRoomButton.isHidden = true
+    }
+    
+    @IBAction func firstFloorButtonTapped(_ sender: Any)
+    {
+        currentFloor = firstFloor
+        setRoomButtons(floor: currentFloor)
+        setDefaultFloorMap(floor: currentFloor)
+    }
+    
+    @IBAction func secondFloorButtonTapped(_ sender: Any)
+    {
+        currentFloor = secondFloor
+        setRoomButtons(floor: currentFloor)
+        setDefaultFloorMap(floor: currentFloor)
+    }
+    
+    @IBAction func thirdFloorButtonTapped(_ sender: Any)
+    {
+        currentFloor = thirdFloor
+        setRoomButtons(floor: currentFloor)
+        setDefaultFloorMap(floor: currentFloor)
+    }
+    
+    @IBAction func fourthFloorButtonTapped(_ sender: Any)
+    {
+        currentFloor = fourthFloor
+        setRoomButtons(floor: currentFloor)
+        setDefaultFloorMap(floor: currentFloor)
+    }
+    
+    @IBAction func fifthFloorButtonTapped(_ sender: Any)
+    {
+        currentFloor = fifthFloor
+        setRoomButtons(floor: currentFloor)
+        setDefaultFloorMap(floor: currentFloor)
     }
 }
