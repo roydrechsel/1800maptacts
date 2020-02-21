@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the meeting room you'd like to find:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-w9-BYY">
-                                <rect key="frame" x="65.5" y="182.5" width="283" height="18.5"/>
+                                <rect key="frame" x="65.5" y="182.5" width="283.5" height="19"/>
                                 <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="16"/>
                                 <color key="textColor" name="BetterWay"/>
                                 <nil key="highlightedColor"/>
@@ -229,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="332.5" width="414" height="460.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pinch to zoom on map)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-MG-Iq7">
-                                        <rect key="frame" x="138.5" y="445.5" width="137" height="15"/>
+                                        <rect key="frame" x="138" y="445" width="138" height="15.5"/>
                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		49F17D4E232FF8C000C5DD4D /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		49F17D50232FF93300C5DD4D /* MapsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsViewController.storyboard; sourceTree = "<group>"; };
-		A713D005232A9BFA000382AD /* 1800Contacts Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1800Contacts Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A713D005232A9BFA000382AD /* Building Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Building Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A713D008232A9BFA000382AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A713D00F232A9BFB000382AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A713D014232A9BFB000382AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		A713D006232A9BFA000382AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A713D005232A9BFA000382AD /* 1800Contacts Map.app */,
+				A713D005232A9BFA000382AD /* Building Map.app */,
 				A713D019232A9BFB000382AD /* 1800Contacts MapTests.xctest */,
 				A713D024232A9BFB000382AD /* 1800Contacts MapUITests.xctest */,
 			);
@@ -136,7 +136,7 @@
 			);
 			name = "1800Contacts Map";
 			productName = "1800Contacts Map";
-			productReference = A713D005232A9BFA000382AD /* 1800Contacts Map.app */;
+			productReference = A713D005232A9BFA000382AD /* Building Map.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A713D018232A9BFB000382AD /* 1800Contacts MapTests */ = {
@@ -417,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-800contacts.-800Contacts-Map";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Building Map";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -435,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-800contacts.-800Contacts-Map";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Building Map";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
