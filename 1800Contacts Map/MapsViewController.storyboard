@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the meeting room you'd like to find:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-w9-BYY">
-                                <rect key="frame" x="65.5" y="182.5" width="283.5" height="19"/>
+                                <rect key="frame" x="65.5" y="182.5" width="283" height="18.5"/>
                                 <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="16"/>
                                 <color key="textColor" name="BetterWay"/>
                                 <nil key="highlightedColor"/>
@@ -229,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="332.5" width="414" height="460.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pinch to zoom on map)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-MG-Iq7">
-                                        <rect key="frame" x="138" y="440" width="138" height="15.5"/>
+                                        <rect key="frame" x="138.5" y="445.5" width="137" height="15"/>
                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="13"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -244,8 +244,6 @@
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="centerY" secondItem="zat-Qa-Sbg" secondAttribute="centerY" id="4v5-El-lrA"/>
                                     <constraint firstAttribute="bottom" secondItem="44x-ga-ACs" secondAttribute="bottom" id="95h-FK-KQA"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="centerX" secondItem="zat-Qa-Sbg" secondAttribute="centerX" id="B9x-fe-Pby"/>
-                                    <constraint firstItem="q3f-MG-Iq7" firstAttribute="centerX" secondItem="zat-Qa-Sbg" secondAttribute="centerX" id="Div-ga-Qdi"/>
-                                    <constraint firstAttribute="bottom" secondItem="q3f-MG-Iq7" secondAttribute="bottom" constant="5" id="IOL-5y-5ga"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="top" secondItem="zat-Qa-Sbg" secondAttribute="top" id="ITS-8f-hDg"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="leading" secondItem="zat-Qa-Sbg" secondAttribute="leading" id="vEQ-cN-a9z"/>
                                 </constraints>
@@ -356,7 +354,9 @@
                             <constraint firstItem="8Mw-OA-yxA" firstAttribute="trailing" secondItem="Gfd-PS-BPY" secondAttribute="trailing" id="Dxb-gt-jqc"/>
                             <constraint firstItem="zat-Qa-Sbg" firstAttribute="centerX" secondItem="qql-xl-Cnh" secondAttribute="centerX" id="FqN-MX-Mdg"/>
                             <constraint firstItem="Ch4-LZ-5sd" firstAttribute="top" secondItem="zat-Qa-Sbg" secondAttribute="bottom" id="IMO-kH-LMD"/>
+                            <constraint firstItem="q3f-MG-Iq7" firstAttribute="bottom" secondItem="Ch4-LZ-5sd" secondAttribute="top" id="KAM-Fh-JfZ"/>
                             <constraint firstItem="Ch4-LZ-5sd" firstAttribute="leading" secondItem="eed-3n-17N" secondAttribute="leading" id="ON7-lf-PUN"/>
+                            <constraint firstItem="q3f-MG-Iq7" firstAttribute="centerX" secondItem="Ch4-LZ-5sd" secondAttribute="centerX" id="Uj1-e7-yKx"/>
                             <constraint firstItem="nJD-yh-fUg" firstAttribute="top" secondItem="8Mw-OA-yxA" secondAttribute="top" id="XCc-3b-TFu"/>
                             <constraint firstItem="qql-xl-Cnh" firstAttribute="trailing" secondItem="8Mw-OA-yxA" secondAttribute="trailing" id="ZNx-vX-jAR"/>
                             <constraint firstItem="Gfd-PS-BPY" firstAttribute="width" secondItem="eed-3n-17N" secondAttribute="width" id="d2e-Jl-DhH"/>

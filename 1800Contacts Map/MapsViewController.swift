@@ -75,9 +75,6 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         seventhRoomButton.layer.cornerRadius = 4
         eighthRoomButton.layer.cornerRadius = 4
         
-        firstFloorButton.roundedButton()
-        secondFloorButton.roundedButton()
-        
         firstFloorButton.backgroundColor = UIColor(named: "BetterWay")
         
         setDefaultFloorMap(floor: firstFloor)
@@ -371,19 +368,5 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
         clearSelectedStates(buttons: allRoomButtons)
-    }
-}
-
-extension UIButton
-{
-    func roundedButton()
-    {
-        let maskPath1 = UIBezierPath(roundedRect: bounds,
-            byRoundingCorners: [.topLeft , .topRight],
-            cornerRadii: CGSize(width: 8, height: 8))
-        let maskLayer1 = CAShapeLayer()
-        maskLayer1.frame = bounds
-        maskLayer1.path = maskPath1.cgPath
-        layer.mask = maskLayer1
     }
 }
