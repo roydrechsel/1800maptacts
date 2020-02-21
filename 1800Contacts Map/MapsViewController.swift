@@ -24,12 +24,19 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var seventhRoomButton: UIButton!
     @IBOutlet weak var eighthRoomButton: UIButton!
     @IBOutlet weak var ninthRoomButton: UIButton!
+    @IBOutlet var allRoomButtons: [UIButton]!
+    
+    @IBOutlet weak var firstFloorButton: UIButton!
+    @IBOutlet weak var secondFloorButton: UIButton!
+    @IBOutlet weak var thirdFloorButton: UIButton!
+    @IBOutlet weak var fourthFloorButton: UIButton!
+    @IBOutlet weak var fifthFloorButton: UIButton!
+    @IBOutlet var allFloorButtons: [UIButton]!
     
     @IBOutlet weak var roomButtonsStackViewOne: UIStackView!
     @IBOutlet weak var roomButtonsStackViewTwo: UIStackView!
     @IBOutlet weak var roomButtonsStackViewThree: UIStackView!
     
-    var roomButtons: [UIButton]!
     var currentFloor = "1st Floor"
     
     let firstFloor = "1st Floor"
@@ -76,9 +83,34 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         setDefaultFloorMap(floor: firstFloor)
     }
     
+    func clearSelectedStates(buttons: [UIButton])
+    {
+        for button in allRoomButtons
+        {
+            button.isSelected = false
+            button.backgroundColor = UIColor.lightGray
+        }
+    }
+    
     func viewForZooming(in scrollView: UIScrollView) -> UIView?
     {
         return mapImage
+    }
+    
+    @IBAction func didTapButton(_ sender: UIButton)
+    {
+        for button in allRoomButtons
+        {
+            button.backgroundColor = button.tag == sender.tag ? UIColor(named: "BetterWay") : UIColor.lightGray
+        }
+    }
+    
+    @IBAction func didTapFloor(_ sender: UIButton)
+    {
+        for button in allFloorButtons
+        {
+            button.titleLabel?.textColor = button.tag == sender.tag ? UIColor(named: "BetterWay") : UIColor.white
+        }
     }
     
     @IBAction func firstRoomButtonTapped(_ sender: Any)
@@ -306,6 +338,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         currentFloor = firstFloor
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
+        clearSelectedStates(buttons: allRoomButtons)
     }
     
     @IBAction func secondFloorButtonTapped(_ sender: Any)
@@ -313,6 +346,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         currentFloor = secondFloor
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
+        clearSelectedStates(buttons: allRoomButtons)
     }
     
     @IBAction func thirdFloorButtonTapped(_ sender: Any)
@@ -320,6 +354,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         currentFloor = thirdFloor
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
+        clearSelectedStates(buttons: allRoomButtons)
     }
     
     @IBAction func fourthFloorButtonTapped(_ sender: Any)
@@ -327,6 +362,7 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         currentFloor = fourthFloor
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
+        clearSelectedStates(buttons: allRoomButtons)
     }
     
     @IBAction func fifthFloorButtonTapped(_ sender: Any)
@@ -334,5 +370,6 @@ class MapsViewController: UIViewController, UIScrollViewDelegate
         currentFloor = fifthFloor
         setRoomButtons(floor: currentFloor)
         setDefaultFloorMap(floor: currentFloor)
+        clearSelectedStates(buttons: allRoomButtons)
     }
 }

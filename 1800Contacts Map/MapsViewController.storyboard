@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FY9-Jy-5Qc">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FY9-Jy-5Qc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,104 +36,112 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="J62-hR-xFw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.1803921568627451" green="0.41960784313725491" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qql-xl-Cnh" userLabel="Buttons View">
-                                <rect key="frame" x="0.0" y="207.5" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="207.5" width="414" height="115"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-hX-XIL">
-                                        <rect key="frame" x="16" y="5" width="382" height="102"/>
+                                        <rect key="frame" x="16" y="5" width="382" height="117"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-9F-vtA">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="35"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-KG-Ebb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-KG-Ebb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="Cwz-fk-zcz"/>
+                                                            <constraint firstAttribute="height" constant="35" id="Cwz-fk-zcz"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="FlM-3u-Lwy"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="HxJ-39-4Oc"/>
                                                             <action selector="firstRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="jwV-IT-a97"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cZ-KN-gQt">
-                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="30"/>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4cZ-KN-gQt">
+                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="IAS-76-YFd"/>
+                                                            <constraint firstAttribute="height" constant="35" id="IAS-76-YFd"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="plP-Nz-z04"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="1VK-5d-0jX"/>
                                                             <action selector="secondRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="bfJ-tX-sfd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2N-pd-b92">
-                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="T2N-pd-b92">
+                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="71N-z4-bRL"/>
-                                                            <constraint firstAttribute="height" constant="30" id="Jin-0b-GcG"/>
+                                                            <constraint firstAttribute="height" constant="35" id="Jin-0b-GcG"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="erf-3J-V8h"/>
                                                             <action selector="thirdRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="n9k-p8-AaM"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="VWV-Kk-MH3">
-                                                <rect key="frame" x="0.0" y="36" width="382" height="30"/>
+                                                <rect key="frame" x="0.0" y="41" width="382" height="35"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oef-xs-k95">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Oef-xs-k95">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="hB7-CC-XCx"/>
-                                                            <constraint firstAttribute="height" constant="30" id="x5g-cC-9ac"/>
+                                                            <constraint firstAttribute="height" constant="35" id="x5g-cC-9ac"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="B4B-uk-ePp"/>
                                                             <action selector="fourthRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="j5Z-vu-vhc"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0D-tb-nbh">
-                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="30"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Y0D-tb-nbh">
+                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="4Qs-bo-4u5"/>
-                                                            <constraint firstAttribute="height" constant="30" id="lgs-wQ-cSV"/>
+                                                            <constraint firstAttribute="height" constant="35" id="lgs-wQ-cSV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="hPy-2R-dou"/>
                                                             <action selector="fifthRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="BSS-wT-3ZU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-8C-410">
-                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-8C-410">
+                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="KIj-Mp-gDL"/>
+                                                            <constraint firstAttribute="height" constant="35" id="KIj-Mp-gDL"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="S3W-Wf-RVY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
@@ -143,31 +149,35 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="s0Q-Rh-14V"/>
                                                             <action selector="sixthRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="9nG-Qd-7Fa"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gVa-gn-Xod">
-                                                <rect key="frame" x="0.0" y="72" width="382" height="30"/>
+                                                <rect key="frame" x="0.0" y="82" width="382" height="35"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nG7-Kf-RQg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nG7-Kf-RQg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="3JN-BW-wkO"/>
+                                                            <constraint firstAttribute="height" constant="35" id="3JN-BW-wkO"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="T34-k9-mAs"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="5Si-gw-1Fp"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDV-n5-KT4">
-                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="30"/>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZDV-n5-KT4">
+                                                        <rect key="frame" x="129.5" y="0.0" width="123" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="9nP-s4-rDF"/>
+                                                            <constraint firstAttribute="height" constant="35" id="9nP-s4-rDF"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="zZ5-CD-Qwn"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
@@ -175,21 +185,23 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="o6q-Mu-2tP"/>
                                                             <action selector="seventhRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="sOh-E1-gOq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-o4-qL5">
-                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="30"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-o4-qL5">
+                                                        <rect key="frame" x="258.5" y="0.0" width="123.5" height="35"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="4fI-Qp-ctZ"/>
-                                                            <constraint firstAttribute="height" constant="30" id="wJp-oL-Dx1"/>
+                                                            <constraint firstAttribute="height" constant="35" id="wJp-oL-Dx1"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="15"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="didTapButton:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="Pdb-zf-YOK"/>
                                                             <action selector="eighthRoomButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="C6W-YC-IVY"/>
                                                         </connections>
                                                     </button>
@@ -201,16 +213,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="1Ck-hX-XIL" firstAttribute="leading" secondItem="qql-xl-Cnh" secondAttribute="leading" constant="16" id="Id7-ti-L2d"/>
-                                    <constraint firstAttribute="height" constant="100" id="bHv-d9-mbo"/>
                                     <constraint firstAttribute="trailing" secondItem="1Ck-hX-XIL" secondAttribute="trailing" constant="16" id="cXg-hX-PrZ"/>
                                     <constraint firstItem="1Ck-hX-XIL" firstAttribute="top" secondItem="qql-xl-Cnh" secondAttribute="top" constant="5" id="lYL-Db-1Rn"/>
+                                    <constraint firstAttribute="height" constant="115" id="oep-rV-lEu"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zat-Qa-Sbg">
-                                <rect key="frame" x="0.0" y="317.5" width="414" height="475.5"/>
+                                <rect key="frame" x="0.0" y="332.5" width="414" height="460.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44x-ga-ACs">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="475.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="460.5"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -231,60 +243,76 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which floor?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXI-aS-Ygu">
                                         <rect key="frame" x="0.0" y="5" width="414" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.11372549019607843" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-pi-vXv">
                                         <rect key="frame" x="5" y="0.0" width="404" height="69"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDv-H9-myj">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDv-H9-myj">
                                                 <rect key="frame" x="0.0" y="36" width="81" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="1st">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledColor">
+                                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="didTapFloor:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="XBa-qh-3Wp"/>
                                                     <action selector="firstFloorButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="oIj-eW-dhv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-Kv-dyd">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jY-Kv-dyd">
                                                 <rect key="frame" x="81" y="36" width="80.5" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="2nd">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="didTapFloor:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="fkZ-iP-XLQ"/>
                                                     <action selector="secondFloorButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="GBF-Vb-KJK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-eh-vJT">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvA-eh-vJT">
                                                 <rect key="frame" x="161.5" y="36" width="81" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="3rd">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="didTapFloor:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="Bai-eY-XLZ"/>
                                                     <action selector="thirdFloorButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="h83-O4-xl1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-Mv-kSQ">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-Mv-kSQ">
                                                 <rect key="frame" x="242.5" y="36" width="80.5" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="4th">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="didTapFloor:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="szK-RV-OhL"/>
                                                     <action selector="fourthFloorButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="q5b-6D-7Zh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chF-6i-llC">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chF-6i-llC">
                                                 <rect key="frame" x="323" y="36" width="81" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="5th">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="didTapFloor:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="Ddj-fv-VoB"/>
                                                     <action selector="fifthFloorButtonTapped:" destination="FY9-Jy-5Qc" eventType="touchUpInside" id="vTr-6h-1vS"/>
                                                 </connections>
                                             </button>
@@ -329,9 +357,12 @@
                     </view>
                     <connections>
                         <outlet property="eighthRoomButton" destination="XGG-o4-qL5" id="u8v-Bn-QHO"/>
+                        <outlet property="fifthFloorButton" destination="chF-6i-llC" id="yfT-1J-9Zn"/>
                         <outlet property="fifthRoomButton" destination="Y0D-tb-nbh" id="lqB-0G-ERO"/>
+                        <outlet property="firstFloorButton" destination="yDv-H9-myj" id="qDT-kn-aYT"/>
                         <outlet property="firstRoomButton" destination="j0v-KG-Ebb" id="3eF-mv-rqy"/>
                         <outlet property="floorLabel" destination="Gfd-PS-BPY" id="Sp3-GQ-VJh"/>
+                        <outlet property="fourthFloorButton" destination="fi3-Mv-kSQ" id="YCy-Xl-uEV"/>
                         <outlet property="fourthRoomButton" destination="Oef-xs-k95" id="9pb-0k-MfQ"/>
                         <outlet property="mapImage" destination="44x-ga-ACs" id="SkB-Fy-MRx"/>
                         <outlet property="ninthRoomButton" destination="nG7-Kf-RQg" id="AiA-G8-i8O"/>
@@ -339,10 +370,26 @@
                         <outlet property="roomButtonsStackViewThree" destination="gVa-gn-Xod" id="KwM-FW-mCt"/>
                         <outlet property="roomButtonsStackViewTwo" destination="VWV-Kk-MH3" id="urn-mf-Ggo"/>
                         <outlet property="scrollView" destination="zat-Qa-Sbg" id="xen-PI-t5a"/>
+                        <outlet property="secondFloorButton" destination="0jY-Kv-dyd" id="hAD-4d-1rU"/>
                         <outlet property="secondRoomButton" destination="4cZ-KN-gQt" id="TdZ-uJ-bn6"/>
                         <outlet property="seventhRoomButton" destination="ZDV-n5-KT4" id="2hq-Aj-eK0"/>
                         <outlet property="sixthRoomButton" destination="f9e-8C-410" id="e06-nK-fvQ"/>
+                        <outlet property="thirdFloorButton" destination="gvA-eh-vJT" id="pzn-VU-Moh"/>
                         <outlet property="thirdRoomButton" destination="T2N-pd-b92" id="jG1-6C-abW"/>
+                        <outletCollection property="allRoomButtons" destination="j0v-KG-Ebb" collectionClass="NSMutableArray" id="Rsq-KF-uQy"/>
+                        <outletCollection property="allRoomButtons" destination="4cZ-KN-gQt" collectionClass="NSMutableArray" id="Da0-dE-3xs"/>
+                        <outletCollection property="allRoomButtons" destination="T2N-pd-b92" collectionClass="NSMutableArray" id="1lt-3D-IPZ"/>
+                        <outletCollection property="allRoomButtons" destination="Oef-xs-k95" collectionClass="NSMutableArray" id="a54-Al-DGa"/>
+                        <outletCollection property="allRoomButtons" destination="Y0D-tb-nbh" collectionClass="NSMutableArray" id="6K9-lY-eht"/>
+                        <outletCollection property="allRoomButtons" destination="f9e-8C-410" collectionClass="NSMutableArray" id="JuP-zx-k3H"/>
+                        <outletCollection property="allRoomButtons" destination="ZDV-n5-KT4" collectionClass="NSMutableArray" id="LUk-bN-oSE"/>
+                        <outletCollection property="allRoomButtons" destination="XGG-o4-qL5" collectionClass="NSMutableArray" id="vB6-0c-zpt"/>
+                        <outletCollection property="allRoomButtons" destination="nG7-Kf-RQg" collectionClass="NSMutableArray" id="tPS-7H-emc"/>
+                        <outletCollection property="allFloorButtons" destination="yDv-H9-myj" collectionClass="NSMutableArray" id="T1i-RU-qoa"/>
+                        <outletCollection property="allFloorButtons" destination="0jY-Kv-dyd" collectionClass="NSMutableArray" id="IvL-Za-fe6"/>
+                        <outletCollection property="allFloorButtons" destination="gvA-eh-vJT" collectionClass="NSMutableArray" id="jDP-NP-rMA"/>
+                        <outletCollection property="allFloorButtons" destination="fi3-Mv-kSQ" collectionClass="NSMutableArray" id="bpq-qn-bz0"/>
+                        <outletCollection property="allFloorButtons" destination="chF-6i-llC" collectionClass="NSMutableArray" id="Fng-zc-Z1J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAt-th-TfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
