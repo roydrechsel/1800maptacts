@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,6 +39,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.1803921568627451" green="0.41960784313725491" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the meeting room you'd like to find:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-w9-BYY">
+                                <rect key="frame" x="65.5" y="182.5" width="283.5" height="19"/>
+                                <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="16"/>
+                                <color key="textColor" name="BetterWay"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qql-xl-Cnh" userLabel="Buttons View">
@@ -221,6 +228,12 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zat-Qa-Sbg">
                                 <rect key="frame" x="0.0" y="332.5" width="414" height="460.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pinch to zoom on map)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3f-MG-Iq7">
+                                        <rect key="frame" x="138" y="440" width="138" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="GTWalsheim-Regular" family="GT Walsheim" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44x-ga-ACs">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="460.5"/>
                                     </imageView>
@@ -231,6 +244,8 @@
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="centerY" secondItem="zat-Qa-Sbg" secondAttribute="centerY" id="4v5-El-lrA"/>
                                     <constraint firstAttribute="bottom" secondItem="44x-ga-ACs" secondAttribute="bottom" id="95h-FK-KQA"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="centerX" secondItem="zat-Qa-Sbg" secondAttribute="centerX" id="B9x-fe-Pby"/>
+                                    <constraint firstItem="q3f-MG-Iq7" firstAttribute="centerX" secondItem="zat-Qa-Sbg" secondAttribute="centerX" id="Div-ga-Qdi"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3f-MG-Iq7" secondAttribute="bottom" constant="5" id="IOL-5y-5ga"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="top" secondItem="zat-Qa-Sbg" secondAttribute="top" id="ITS-8f-hDg"/>
                                     <constraint firstItem="44x-ga-ACs" firstAttribute="leading" secondItem="zat-Qa-Sbg" secondAttribute="leading" id="vEQ-cN-a9z"/>
                                 </constraints>
@@ -335,6 +350,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lqP-w9-BYY" firstAttribute="top" secondItem="Gfd-PS-BPY" secondAttribute="bottom" constant="10" id="90U-yM-zvP"/>
+                            <constraint firstItem="lqP-w9-BYY" firstAttribute="centerX" secondItem="Gfd-PS-BPY" secondAttribute="centerX" id="AEo-qP-FSj"/>
                             <constraint firstAttribute="trailing" secondItem="Ch4-LZ-5sd" secondAttribute="trailing" id="AdZ-XP-sG5"/>
                             <constraint firstItem="8Mw-OA-yxA" firstAttribute="trailing" secondItem="Gfd-PS-BPY" secondAttribute="trailing" id="Dxb-gt-jqc"/>
                             <constraint firstItem="zat-Qa-Sbg" firstAttribute="centerX" secondItem="qql-xl-Cnh" secondAttribute="centerX" id="FqN-MX-Mdg"/>
@@ -397,4 +414,9 @@
             <point key="canvasLocation" x="249" y="-225"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BetterWay">
+            <color red="0.1803921568627451" green="0.41960784313725491" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
